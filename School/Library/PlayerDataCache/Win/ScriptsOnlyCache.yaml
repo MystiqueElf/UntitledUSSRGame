@@ -1,8 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Button
+    - ButtonC
     - Russia
+    - StartExit
     - Timer
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -66,27 +67,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 13176}
+      Script: {instanceID: 13178}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13264}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 13282}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13592}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13694}
     - Class: 114
-      Script: {instanceID: 13982}
+      Script: {instanceID: 13984}
     - Class: 114
-      Script: {instanceID: 14158}
+      Script: {instanceID: 14160}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -94,6 +95,59 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Start.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11192}
+    - Class: 114
+      Script: {instanceID: 11534}
+    - Class: 114
+      Script: {instanceID: 12200}
+    - Class: 114
+      Script: {instanceID: 12910}
+    - Class: 114
+      Script: {instanceID: 13264}
+    - Class: 114
+      Script: {instanceID: 13592}
+    - Class: 114
+      Script: {instanceID: 13694}
+    - Class: 114
+      Script: {instanceID: 14330}
+    - Class: 114
+      Script: {instanceID: 16042}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -205,7 +259,7 @@ ScriptsOnlyBuild:
       Hash: 16f6e5eef9a2a56f23e9fe05744fa307
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Button
+    className: ButtonC
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -454,13 +508,13 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 8c3d05c6d9ad3369c7f8d76186e48c19
+      Hash: e4b9e8ba7107264573bf306e987f0a53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Timer
   - hash:
       serializedVersion: 2
-      Hash: 533dce181585c2848d93f111c27ab099
+      Hash: ac9d2bd3525e267c5081192416080618
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Russia
@@ -794,7 +848,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartExit
   platform: 5
   scenePathNames:
   - Assets/Scenes/Russia.unity
+  - Assets/Scenes/Start.unity
   playerPath: C:/Users/ProGo/Documents/Coding Stuff/repos/School/Builds/School.exe

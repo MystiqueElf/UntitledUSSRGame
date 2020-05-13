@@ -14,16 +14,6 @@ public class Timer : MonoBehaviour
     public int currentYear = 1949;
     [HideInInspector]
     public string CurrentTime;
-    bool timeRunning = true;
-
-    public void StopTime()
-    {
-        timeRunning = false;
-    }
-    public void StartTime()
-    {
-        timeRunning = true;
-    }
 
     [HideInInspector]
     public string currentText = "January 1. 1949";

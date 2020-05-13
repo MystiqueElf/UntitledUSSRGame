@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using TMPro;
-using UnityEditor;
-using System.Reflection;
-using System;
+//using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Russia : MonoBehaviour
 {
@@ -20,6 +17,16 @@ public class Russia : MonoBehaviour
     public bool TimeStopped = true;
     public bool EventDone = true;
     private Event blank = new Event("", "", "", "","","","","","","","");
+
+    public int Money;
+    public int Space;
+    public int Military;
+    public int Alliance;
+
+    public int USMoney = 80;
+    public int USSpace = 80;
+    public int USMilitary = 80;
+    public int USAlliance = 80;
 
     List<Event> Events = new List<Event>();
 
@@ -36,8 +43,13 @@ public class Russia : MonoBehaviour
         Option3.onClick.AddListener(() => Button3(input));
         Option4.onClick.AddListener(() => Button4(input));
 
-        Events.Add(new Event("4. April 1949","NATO has Formed", "USA has formed an anti soviet alliance, called NATO, what is our response?", "Ask to Join Nato?", "Be mad", "Get sad", "Start making your own", "USA: NO!","USA: HEHEHEHEHXD","USA: UwU","USA: >.<"));
+        Money = 100;
+        Space = 60;
+        Military = 60;
+        Alliance = 60;
 
+        Events.Add(new Event("4. April 1949","NATO has formed", "USA has formed an anti soviet alliance, called NATO, what is our response?", "Ask to Join Nato?", "Start making your own", "Your proposal was rejected","Creation of the Warsaw pact has begun"));
+        Events.Add(new Event("4. October 1957", "Into Space!", "The Sputnik 1 project has been a huge success, and everyone looks to the USSR", "With such success the project must escalate","We have achieved what we needed","Project funding increased", "Project funding decreased"));
         TimeStopped = false;
         Timer.currentYear = 1949;
         History.text = "";
@@ -47,6 +59,33 @@ public class Russia : MonoBehaviour
         if(Timer.CurrentTime == "4. April 1949")
         {
             RussianTime(input = Events[0]);
+            if(Description.text == "Creation of the Warsaw pact has begun")
+            {
+                Alliance += 20;
+            }
+        }
+        if(Timer.CurrentTime == "4. October 1957")
+        {
+            RussianTime(input = Events[1]);
+
+            if(Description.text == "Project funding increased")
+            {
+                Money += -10;
+                Space += 20;
+            }
+        }
+        if(Timer.CurrentTime == "1. January 1991")
+        {
+            if(Money+Space+Military+Alliance >= USMoney + USSpace + USMilitary + USAlliance)
+            {
+                Title.text = "The Union will last a thousand years!";
+                Description.text = "The USSR has defeated the american pigs!";
+            }
+            else
+            {
+                Title.text = "The USSR has collapsed";
+                Description.text = "The USSR has collapsed under its own weight, and the many countries within have split apart, Russia now weakened will have to forfeit to the americans";
+            }
         }
     }
 
@@ -71,7 +110,11 @@ public class Russia : MonoBehaviour
         {
             Timer.UpdateTime(Time.fixedDeltaTime);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Start");
+        }
     }
     public void Button1(Event ev)
     {
